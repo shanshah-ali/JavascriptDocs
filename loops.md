@@ -44,7 +44,7 @@ do {
     while (condition)
         statement
 
-```
+```Javascript
 //example
 let a = 0;
 while(a < 3) {
