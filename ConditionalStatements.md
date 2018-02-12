@@ -23,7 +23,7 @@ Use the if statement to execute a statement if a logical condition is true. Use 
 
 **Do not confuse the primitive boolean values true and false with the true and false values of the Boolean object. For example:**
 
-```
+```Javascript
     var b = new Boolean(false);
     if (b) // this condition evaluates to true
     if (b == true) // this condition evaluates to false
@@ -31,7 +31,7 @@ Use the if statement to execute a statement if a logical condition is true. Use 
 
 ### switch statement
 A switch statement allows a program to evaluate an expression and attempt to match the expression's value to a case label. If a match is found, the program executes the associated statement.
-```
+```Javascript
 switch(expression) {
     case label_1:
         statement_1:
