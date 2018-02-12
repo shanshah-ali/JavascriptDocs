@@ -8,7 +8,7 @@ A function definition (also called a function declaration, or function statement
 * A list of parameters to the function, enclosed in parentheses and separated by commas
 * The JavaScript statements that define the function, enclosed in curly brackets, { }.
 
-```
+```Javascript
     function square(number, number2) {
         return number * number2;
 }
@@ -17,7 +17,7 @@ A function definition (also called a function declaration, or function statement
 ##### Function expressions
 While the function declaration above is syntactically a statement, functions can also be created by a function expression.Such a function can be **anonymous**; it does not have to have a name. For example, the function square could have been defined as:
 
-```
+```Javascript
     var square = function (number) {
         return number * number;
     }
@@ -26,7 +26,7 @@ While the function declaration above is syntactically a statement, functions can
 
 ##### Calling functions
 Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called.To execute a function u need to call it with parameters
-```
+```Javascript
     square(5);
 ```
 
@@ -35,7 +35,7 @@ Defining a function does not execute it. Defining the function simply names the 
 2. function can access all the variable and functions defined inside the scope in which it is defined.
 3. A function defined inside another function can also access all the variable of its parent.
 
-```
+```Javascript
     //variables defined in global scope
 
     var num = 20,
@@ -66,7 +66,7 @@ You can nest a function inside a function. Nested function in private to its con
  **To summarize**
  1. The inner function can be accessed only from statements in the outer function
  2. The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function.
- ```
+ ```Javascript
     const addSquare = (a,b) => {
         const square = x => x*x;
         return square(a) + square(b);
@@ -75,7 +75,7 @@ You can nest a function inside a function. Nested function in private to its con
  ```
 
  #### Preservation of variables
-```
+```Javascript
 const outside = x => {
     const inside = y => x + y;
   return inside;
@@ -94,7 +94,7 @@ The memory can be freed only when the returned inside is no longer accessible.
  Since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the inner function execution, if the inner function manages to survive beyond the life of the outer function.
  ***So when  closure is created***
 A closure is created when the inner function is somehow made available to any scope outside the outer function.
-```
+```Javascript
 var createPet = function(name) {
   var sex;
 
