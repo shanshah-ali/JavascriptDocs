@@ -14,7 +14,7 @@ The statements for loops provided in JavaScript are:
 
     for ([initialExpression]; [condition]; [incrementExpression])
         statement
-```
+```Javascript
 //example
     let arr = [];
     for(let i = 0; i < 5; i++) {
@@ -29,7 +29,7 @@ The statements for loops provided in JavaScript are:
         statement
     while (condition);
 
-```
+```Javascript
 //example
 let i = 0;
 do {
@@ -57,7 +57,7 @@ while(a < 3) {
 >Use the break statement to terminate a loop,
 
     break [label]
-```
+```Javascript
 for (var i = 0; i < a.length; i++) {
   if (a[i] == theValue) {
     break;
@@ -68,7 +68,7 @@ for (var i = 0; i < a.length; i++) {
 >The continue statement can be used to restart a while, do-while, for or label statements
 
     continue [label];
-```
+```Javascript
     var i = 0;
     var n = 0;
     while (i < 5) {
@@ -103,7 +103,7 @@ for (variable of object) {
 | for..in returns a list of keys on the object being iterated    | for..of returns a list of values of the numeric properties of the object being iterated.      |
 
 
-```
+```Javascript
 //example
 let list = [4, 5, 6];
 
