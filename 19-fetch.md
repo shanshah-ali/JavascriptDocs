@@ -3,7 +3,7 @@ The Fetch API is a simple interface for fetching resources. The most useful, h
 ### fetch() method
 The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network. This returns a promise that resolves to the Response object representing the response to your request.
 ##### Example:
-```
+``` javascript
 
 fetch("/example.com").then((res) => {
   // res instanceof Response == true.
@@ -27,7 +27,7 @@ When the promise resolves, the response is passed to .then. This is where the r
 ###### GET:
 The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
 ###### Example:
-```
+``` javascript
 // url (required), options (optional)
 fetch('/some/url', {
 	method: 'GET'
@@ -41,7 +41,7 @@ fetch('/some/url', {
 ###### POST:
 The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
 ###### Example:
-```
+``` javascript
 fetch('/login', {
     method: 'POST',  
     body: JSON.stringify({
@@ -76,7 +76,7 @@ The PATCH method is used to apply partial modifications to a resource.
 The Headers interface of the Fetch API allows us to perform various actions on HTTP request and response headers. These actions include retrieving, setting, adding to, and removing. A Headers object has an associated header list, which is initially empty and consists of zero or more name and value pairs.  You can add to this using methods like append().
 
 ###### Example:
-```
+``` javascript
 const content = 'hello world';
 let reqHeaders = new Headers();
 reqHeaders.append("Content-Type", "text/plain"
@@ -84,7 +84,7 @@ reqHeaders.append("Content-Length", content.length.toString());
 reqHeaders.append("X-Custom-Header", "ProcessThisImmediately");
 ```
 ###### or
-```
+``` javascript
 reqHeaders = new Headers({
   "Content-Type": "text/plain",
   "Content-Length": content.length.toString(),
@@ -95,7 +95,7 @@ reqHeaders = new Headers({
 ### Custom headers
 
 The following code demonstrates how a custom Headers object can be created and used with a fetch request:
-```
+``` javascript
 var myHeaders = new Headers({
   'Content-Type': 'text/plain',
   'X-Custom-Header': 'hello world'
@@ -115,7 +115,7 @@ In responses, a Content-Type header tells the client what the content type of th
 In requests, (such as POST or PUT), the client tells the server what type of data is actually sent.
 
 ##### Example:
- ```
+ ``` javascript
 fetch('/login', {
     method: 'POST',
     headers: {
@@ -139,14 +139,14 @@ You can read more about 'Content-Type' values [here](https://developer.mozilla.o
 
 ### credentials
 To cause browsers to send a request with credentials included, even for a cross-origin call, add credentials: 'include' to the init object you pass to the fetch() method.
-```
+``` javascript
 fetch('https://myevive.com/', {
   credentials: 'include'  
 });
 ```
 If you only want to send credentials if the request URL is on the same origin as the calling script, add credentials: 'same-origin'.
 
-```
+``` javascript
 // The calling script is on the origin 'https://example.com'
 fetch('https://myevive.com/', {
   credentials: 'same-origin'  
@@ -171,7 +171,7 @@ The most commonly used response properties are as follows:
 * Response.ok — seen in use above, this is a shorthand for * checking that status is in the range 200-299 inclusive. This returns a Boolean.
 
 ###### Example:
-```
+``` javascript
 fetch('examples/example.json')
 .then(function(response) {
   if (!response.ok) {
